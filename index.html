@@ -82,6 +82,8 @@
 
             listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
 
+            console.log(listaUsuario);
+
             listaUsuario.forEach((item) => {
                 if (email.value == item.emailCadastrado && senha.value == item.senhaCadastrada) {
                     userValid = {
