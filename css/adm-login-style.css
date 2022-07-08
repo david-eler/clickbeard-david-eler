@@ -1,0 +1,132 @@
+body {
+    height: 100vh;
+    font-family: "Karla", sans-serif;
+    background-image: url("../img/barbershop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-global {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1440px;
+}
+
+.caixa1 {
+    background: rgba(1,1,1,0.9);
+    color: white;
+    padding: 220px 110px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.titulo h1 {
+    font-size: 80px;
+}
+
+.titulo h1 span {
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.titulo p {
+    font-size: 50px;
+}
+
+.caixa2 {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 220px 110px;
+}
+
+.login-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.caixa2 h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.caixa2 label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.caixa2 input {
+    width: 220px;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 2px;
+}
+
+hr {
+    width: 100px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px 40px;
+    border: 0;
+    box-shadow: 2px 2px 3px;
+    border-radius: 4px;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
+}
+
+.links {
+    background: rgba(1,1,1,0.9);
+    padding: 4px 8px;
+    color: red;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+@media(max-width: 1100px){
+    body {
+        height: auto;
+        min-width: 375px;
+    }
+
+    .conteudo {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px 20px;
+    }
+
+    .caixa1 {
+        padding: 30px 20px;
+    }
+
+    .titulo h1 {
+        font-size: 60px;
+    }
+
+    .caixa2 {
+        padding: 50px 20px;
+    }
+}

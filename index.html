@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="icon" href="./img/barbershop-icon.png">
+    <title>Home - ClickBeard</title>
+</head>
+
+<body>
+    <div class="container-global">
+        <div class="conteudo">
+            <div class="caixa1">
+                <div class="titulo">
+                    <p>Seja bem-vindo ao</p>
+                    <h1>ClickBeard<span>®</span></h1>
+                </div>
+            </div>
+
+            <div class="caixa2">
+                <div id="msgErro"></div>
+                <h2>Faça seu login</h2>
+                <div class="login-area">
+                    <div class="email">
+                        <label id="label-email" for="email">E-mail:</label>
+                        <input type="text" id="email" placeholder="">
+                    </div>
+
+                    <div class="senha">
+                        <label id="label-senha" for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+
+                    <hr>
+
+                    <button onclick="entrar()">Entrar</button>
+
+                    <p class="links">Não possui conta? <a href="usuario-cadastro.html">Cadastre-se!</a></p>
+
+                    <p class="links">É administrador? <a href="adm-login.html">Clique aqui.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector(".fa-eye");
+
+        btn.addEventListener("click", () => {
+            let inputSenha = document.querySelector("#senha");
+
+            if (inputSenha.getAttribute("type") == "password") {
+                inputSenha.setAttribute("type", "text");
+            } else {
+                inputSenha.setAttribute("type", "password");
+            }
+        });
+
+        function entrar() {
+            let email = document.querySelector("#email");
+            let labelEmail = document.querySelector("#label-email");
+
+            let senha = document.querySelector("#senha");
+            let labelSenha = document.querySelector("#label-senha");
+
+            let msgErro = document.querySelector("#msgErro");
+            let listaUsuario = [];
+
+            let userValid = {
+                nome: '',
+                email: '',
+                senha: ''
+            };
+
+            listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
+
+            listaUsuario.forEach((item) => {
+                if (email.value == item.emailCadastrado && senha.value == item.senhaCadastrada) {
+                    userValid = {
+                        nome: item.nomeCadastrado,
+                        email: item.emailCadastrado,
+                        senha: item.senhaCadastrada
+                    }
+                }
+            });
+
+            if (email.value == userValid.email && senha.value == userValid.senha) {
+                window.location.href = "usuario-area.html";
+            } else {
+                msgErro.setAttribute("style", "display: block");
+                msgErro.innerHTML = "<strong> E-mail e/ou senha inválidos. </strong>";
+            }
+        }
+    </script>
+</body>
+
+</html>

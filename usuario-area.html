@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/usuario-area-style.css" />
+    <link rel="icon" href="./img/barbershop-icon.png">
+    <title>Agendar - ClickBeard</title>
+</head>
+
+<body>
+    <div class="container-global">
+        <div class="conteudo">
+            <div class="titulo">
+                <h1>ClickBeard<span>®</span></h1>
+            </div>
+
+            <div class="agendar-h2">
+                <h2>Faça seu agendamento</h2>
+            </div>
+
+            <div class="caixa-global">
+                <div class="caixa1">
+                    <fieldset>
+                        <legend>Marque os serviços de seu interesse: </legend>
+
+                        <div class="servicos">
+                            <div>
+                                <input type="checkbox" name="tesoura" id="tesoura" value="corte-tesoura">
+                                <label for="tesoura">Corte Tesoura</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="maquina" id="maquina" value="corte-maquina">
+                                <label for="maquina">Corte Máquina</label>
+                            </div>
+
+
+                            <div>
+                                <input type="checkbox" name="barba" id="barba" value="corte-barba">
+                                <label for="barba">Barba</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="sobrancelha" id="sobrancelha" value="corte-sobrancelha">
+                                <label for="sobrancelha">Sobrancelha</label>
+                            </div>
+                        </div>
+
+                        <div class="barbeiros">
+                            <label for="barbeiro">Barbeiro: </label>
+                            <select name="barbeiro" id="barbeiro">
+                                <option value="david">David</option>
+                                <option value="roberto">Roberto</option>
+                                <option value="abel">Abel</option>
+                                <option value="paulo">Paulo</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="caixa2">
+                    <fieldset>
+                        <div class="data-area">
+                            <label for="data">Data:</label>
+                            <input type="date" name="data-agendamento" id="data-agendamento" value="">
+                        </div>
+
+                        <div class="horario-area">
+                            <label for="horario">Horário: </label>
+                            <select name="horario-agendamento" id="horario-agendamento">
+                                <option value="08:00">08:00</option>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+
+                    <div class="aviso-area">
+                        <input type="checkbox" name="aviso" id="aviso" value="aviso-agendamento">
+                        <label for="aviso">É necessário chegar com 5 minutos de antecedência. Do contrário, o
+                            agendamento será cancelamento automaticamente.</label>
+                    </div>
+
+                    <div class="links-area">
+                        <div class="button">
+                            <button>Agendar</button>
+                        </div>
+
+                        <p class="links"><a href="/">Meus agendamentos</a></p>
+
+                        <p class="links"><a href="index.html">Sair</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

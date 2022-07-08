@@ -1,0 +1,221 @@
+body {
+    height: 100vh;
+    font-family: "Karla", sans-serif;
+    background-image: url("../img/barbershop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-global {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1440px;
+}
+
+.titulo {
+    background: rgba(1,1,1,0.9);
+    padding: 5px 10px;
+}
+
+.titulo h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.titulo h1 span {
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.agendar-h2 {
+    background: rgb(70, 70, 70);
+    padding: 5px 10px;
+}
+
+.agendar-h2 h2 {
+    color: white;
+    text-align: center;
+}
+
+.caixa-global {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.caixa1 {
+    background: black;
+    color: white;
+    padding: 120px 90px;
+}
+
+.caixa1 legend {
+    margin-bottom: 30px;
+}
+
+.servicos {
+    margin-bottom: 30px;
+}
+
+.servicos input {
+    margin-bottom: 10px;
+}
+
+.barbeiros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 155px;
+}
+
+.barbeiros select {
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.meus-agendamentos a {
+    color: red;
+    text-decoration: none;
+}
+
+.meus-agendamentos a:hover {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+.caixa2 {
+    background: black;
+    color: white;
+    padding: 120px 90px;
+    border-left: 1px solid rgba(70,70,70,.5);
+}
+
+.data-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#data-agendamento {
+    font-family: "Karla", sans-serif;
+    font-size: 15px;
+    padding: 5px 5px;
+}
+
+.horario-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.horario-area select {
+    font-family: "Karla", sans-serif;
+    font-size: 15px;
+    padding: 5px 5px;
+}
+
+.aviso-area {
+    margin-bottom: 40px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+button {
+    align-self: center;
+    padding: 10px 25px;
+    border: 0;
+    box-shadow: 2px 2px 3px;
+    border-radius: 4px;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: red;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+@media(max-width: 900px){
+    body {
+        height: auto;
+        min-width: 375px;
+    }
+
+    .conteudo {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .caixa-global {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .caixa1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px 20px;
+    }
+
+    .servicos input {
+        margin-bottom: 20px;
+    }
+
+    .barbeiros {
+        margin-bottom: 0;
+    }
+
+    .caixa2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 40px;
+    }
+
+    #data-agendamento {
+        margin-left: 72px;
+        padding: 10px;
+    }
+
+    .aviso-area {
+        padding: 10px 70px;
+        margin-bottom: 30px;
+    }
+
+    .sair {
+        margin-bottom: 30px;
+    }
+}
