@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/adm-cadastro-style.css" />
+    <link rel="icon" href="./img/barbershop-icon.png">
+    <title>Cadastro - ClickBeard</title>
+</head>
+
+<body>
+    <div class="container-global">
+        <div class="conteudo">
+            <div class="titulo">
+                <h1>ClickBeard<span>®</span></h1>
+            </div>
+
+            <div class="cadastrar-h2">
+                <h2>Cadastre sua conta</h2>
+            </div>
+
+            <div id="msgErro"></div>
+            <div id="msgSucesso"></div>
+
+            <div class="caixa-global">
+                <div class="caixa1">
+                    <div>
+                        <div class="nome">
+                            <label id="label-nome" for="nome"> Nome completo:</label>
+                            <input type="text" id="nome" placeholder="">
+                        </div>
+
+                        <div class="email">
+                            <label id="label-email" for="email">E-mail:</label>
+                            <input type="text" id="email" placeholder="">
+                        </div>
+
+                        <div class="email">
+                            <label id="label-confirmar-email" for="confirmacao-email">Confirme seu e-mail:</label>
+                            <input type="text" id="confirmacao-email" placeholder="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="caixa2">
+                    <div class="senha-area">
+                        <div class="senha">
+                            <label id="label-senha" for="senha">Defina uma senha:</label>
+                            <input type="password" name="senha" id="senha" value="">
+                            <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="senha">
+                            <label id="label-confirmar-senha" for="confirmacao-senha">Confirme sua senha:</label>
+                            <input type="password" name="confirmacao-senha" id="confirmacao-senha" value="">
+                            <i id="verConfirmarSenha" class="fa fa-eye" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="button">
+                            <button onclick="cadastrar()">Cadastrar</button>
+                        </div>
+
+                        <div class="links">
+                            <a href="index.html">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector('#verSenha');
+        let btn2 = document.querySelector('#verConfirmarSenha');
+
+        let nome = document.querySelector('#nome');
+        let labelNome = document.querySelector('#label-nome');
+        let validNome = false;
+
+        let email = document.querySelector('#email');
+        let labelEmail = document.querySelector('#label-email');
+        let validEmail = false;
+
+        let confirmarEmail = document.querySelector('#confirmacao-email');
+        let labelConfirmarEmail = document.querySelector('#label-confirmar-email');
+        let validConfirmarEmail = false;
+
+        let senha = document.querySelector('#senha');
+        let labelSenha = document.querySelector('#label-senha');
+        let validSenha = false;
+
+        let confirmarSenha = document.querySelector('#confirmacao-senha');
+        let labelConfirmarSenha = document.querySelector('#label-confirmar-senha');
+        let validConfirmarSenha = false;
+
+        let msgErro = document.querySelector('#msgErro');
+        let msgSucesso = document.querySelector('#msgSucesso');
+
+        btn.addEventListener('click', () => {
+            let inputSenha = document.querySelector('#senha');
+
+            if (inputSenha.getAttribute('type') == 'password') {
+                inputSenha.setAttribute('type', 'text');
+            } else {
+                inputSenha.setAttribute('type', 'password');
+            }
+        })
+
+        btn2.addEventListener('click', () => {
+            let inputConfirmarSenha = document.querySelector('#confirmacao-senha');
+
+            if (inputConfirmarSenha.getAttribute('type') == 'password') {
+                inputConfirmarSenha.setAttribute('type', 'text');
+            } else {
+                inputConfirmarSenha.setAttribute('type', 'password');
+            }
+        })
+
+        nome.addEventListener('keyup', () => {
+            if (nome.value.length <= 2) {
+                labelNome.setAttribute('style', 'color: red');
+                labelNome.innerHTML = '*Insira no minimo 3 caracteres*';
+            } else {
+                labelNome.setAttribute('style', 'color: white');
+                labelNome.innerHTML = 'Nome completo:';
+                validNome = true;
+            }
+        })
+
+        email.addEventListener('keyup', () => {
+            if (email.value.length > 0 && email.value.length <= 4) {
+                labelEmail.setAttribute('style', 'color: red');
+                labelEmail.innerHTML = '*Insira no minimo 5 caracteres*';
+            } else {
+                labelEmail.setAttribute('style', 'color: white');
+                labelEmail.innerHTML = 'E-mail:';
+                validEmail = true;
+            }
+        })
+
+        confirmarEmail.addEventListener('keyup', () => {
+            if (email.value != confirmarEmail.value) {
+                labelConfirmarEmail.setAttribute('style', 'color: red');
+                labelConfirmarEmail.innerHTML = '*E-mails não conferem*';
+            } else {
+                labelConfirmarEmail.setAttribute('style', 'color: white');
+                labelConfirmarEmail.innerHTML = 'Confirme seu e-mail:';
+                validConfirmarEmail = true;
+            }
+        })
+
+        senha.addEventListener('keyup', () => {
+            if (senha.value.length > 0 && senha.value.length <= 5) {
+                labelSenha.setAttribute('style', 'color: red');
+                labelSenha.innerHTML = '*Insira no minimo 6 caracteres*';
+            } else {
+                labelSenha.setAttribute('style', 'color: white');
+                labelSenha.innerHTML = 'Senha:';
+                validSenha = true;
+            }
+        })
+
+        confirmarSenha.addEventListener('keyup', () => {
+            if (senha.value != confirmarSenha.value) {
+                labelConfirmarSenha.setAttribute('style', 'color: red');
+                labelConfirmarSenha.innerHTML = '*Senhas não conferem*';
+            } else {
+                labelConfirmarSenha.setAttribute('style', 'color: white');
+                labelConfirmarSenha.innerHTML = 'Confirme sua senha:';
+                validConfirmarSenha = true;
+            }
+        })
+
+        function cadastrar() {
+            if (validNome && validEmail && validConfirmarEmail && validSenha && validConfirmarSenha) {
+                let listaAdm = JSON.parse(localStorage.getItem('listaAdm') || '[]');
+
+                listaAdm.push({
+                    nomeCadastrado: nome.value,
+                    emailCadastrado: email.value,
+                    senhaCadastrada: senha.value
+                });
+
+                localStorage.setItem('listaAdm', JSON.stringify(listaAdm));
+
+                msgSucesso.setAttribute('style', 'display: block');
+                msgSucesso.innerHTML = '<strong> Cadastro efetuado com sucesso. </strong>';
+                msgErro.setAttribute('style', 'display: none');
+                msgErro.innerHTML = '';
+                
+                setTimeout(()=>{
+                    window.location.href = 'index.html';
+                }, 3000)
+
+            } else {
+                msgErro.setAttribute('style', 'display: block');
+                msgErro.innerHTML = '<strong> Preencha todos os dados corretamente. </strong>';
+                msgSucesso.setAttribute('style', 'display: none');
+                msgSucesso.innerHTML = '';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -53,6 +53,16 @@ body {
     padding: 220px 110px;
 }
 
+
+#msgErro {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px;
+    background: #FF0000;
+    margin-bottom: 10px;
+    display: none;
+}
+
 .login-area {
     display: flex;
     flex-wrap: wrap;
@@ -80,6 +90,17 @@ body {
     border-radius: 2px;
 }
 
+.senha {
+    position: relative;
+}
+
+.fa-eye {
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    cursor: pointer;
+}
+
 hr {
     width: 100px;
     margin: 5px;
@@ -88,10 +109,15 @@ hr {
 button {
     padding: 10px 40px;
     border: 0;
-    box-shadow: 2px 2px 3px;
     border-radius: 4px;
     font-family: "Karla", sans-serif;
     font-size: 20px;
+}
+
+button:hover {
+    color: white;
+    background: #000000;
+    cursor: pointer;
 }
 
 .links {

@@ -25,7 +25,7 @@
             </div>
 
             <div class="caixa-global">
-                <div class="caixa1"> 
+                <div class="caixa1">
                     <div>
                         <div class="nome">
                             <label for="nome">Nome:</label>
@@ -45,8 +45,8 @@
 
                 </div>
 
-                <div class="caixa2"> <!-- caixa2 -->
-                    <div class="especialidades-area"> <!-- especialidades-area -->
+                <div class="caixa2">
+                    <div class="especialidades-area">
                         <legend>Especialidades:</legend>
 
                         <div>
@@ -85,6 +85,16 @@
                 </div>
             </div>
         </div>
+    </div>
+    <script>
+        let admLogado = JSON.parse(localStorage.getItem('admLogado'));
+
+        function sair() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('admLogado');
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 
 </html>
