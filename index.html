@@ -74,29 +74,18 @@
             let msgErro = document.querySelector("#msgErro");
             let listaUsuario = [];
 
-            let userValid = {
-                nome: '',
-                email: '',
-                senha: ''
-            };
-
             listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
 
-            listaUsuario.forEach((item) => {
-                if (email.value == item.emailCadastrado && senha.value == item.senhaCadastrada) {
-                    userValid = {
-                        nome: item.nomeCadastrado,
-                        email: item.emailCadastrado,
-                        senha: item.senhaCadastrada
-                    }
-                }
-            });
-
-            if (email.value == userValid.email && senha.value == userValid.senha) {
+            let userValid = listaUsuario.find(
+                item => email.value == item.emailCadastrado && senha.value == item.senhaCadastrada
+            );
+         
+            if (userValid != undefined) {
                 window.location.href = "usuario-area.html";
                 let mathRandom = Math.random().toString(16).substr(2)
                 let token = mathRandom + mathRandom;
-                localStorage.setItem('token', token)
+                localStorage.setItem('token', token);
+                localStorage.setItem('userLogado', JSON.stringify(userValid));
             } else {
                 msgErro.setAttribute("style", "display: block");
                 msgErro.innerHTML = "<strong> E-mail e/ou senha inválidos. </strong>";
