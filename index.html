@@ -82,8 +82,6 @@
 
             listaUsuario = JSON.parse(localStorage.getItem("listaUsuario"));
 
-            console.log(listaUsuario);
-
             listaUsuario.forEach((item) => {
                 if (email.value == item.emailCadastrado && senha.value == item.senhaCadastrada) {
                     userValid = {
@@ -96,6 +94,9 @@
 
             if (email.value == userValid.email && senha.value == userValid.senha) {
                 window.location.href = "usuario-area.html";
+                let mathRandom = Math.random().toString(16).substr(2)
+                let token = mathRandom + mathRandom;
+                localStorage.setItem('token', token)
             } else {
                 msgErro.setAttribute("style", "display: block");
                 msgErro.innerHTML = "<strong> E-mail e/ou senha inválidos. </strong>";

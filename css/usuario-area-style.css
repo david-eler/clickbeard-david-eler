@@ -22,7 +22,7 @@ body {
 }
 
 .titulo {
-    background: rgba(1,1,1,0.9);
+    background: rgba(1, 1, 1, 0.9);
     padding: 5px 10px;
 }
 
@@ -98,7 +98,7 @@ body {
     background: black;
     color: white;
     padding: 120px 90px;
-    border-left: 1px solid rgba(70,70,70,.5);
+    border-left: 1px solid rgba(70, 70, 70, .5);
 }
 
 .data-area {
@@ -133,13 +133,13 @@ body {
     text-align: justify;
 }
 
-.button {
+.agendar-button {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-button {
+.agendar-button button {
     align-self: center;
     padding: 10px 25px;
     border: 0;
@@ -152,7 +152,7 @@ button {
 .links {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .links a {
@@ -165,7 +165,27 @@ button {
     text-decoration: underline;
 }
 
-@media(max-width: 900px){
+.sair-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.sair-button button {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 4px;
+}
+
+button:hover {
+    color: white;
+    background: grey;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
     body {
         height: auto;
         min-width: 375px;

@@ -100,18 +100,34 @@
                     </div>
 
                     <div class="links-area">
-                        <div class="button">
+                        <div class="agendar-button">
                             <button>Agendar</button>
                         </div>
 
                         <p class="links"><a href="/">Meus agendamentos</a></p>
-
-                        <p class="links"><a href="index.html">Sair</a></p>
+                        <div class="sair-button">
+                            <button onclick="sair()">Sair</button>
+                        </div>                       
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    let userLogado = JSON.parse(localStorage.getItem('userLogado')) ;
+
+    if(localStorage.getItem('token') == null){
+    alert('Você precisa estar logado para acessar essa página');
+    window.location.href = 'index.html';
+    }
+
+    function sair(){
+        localStorage.removeItem('token');
+        localStorage.removeItem('userLogado');
+        window.location.href = 'index.html';
+    }
+</script>
 
 </html>
