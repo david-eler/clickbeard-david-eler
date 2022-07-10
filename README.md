@@ -1,7 +1,7 @@
 <h1 align="center">ClickBeard</h1>
 
 <h2 align="center">Teste técnico proposto - Sistema de Agendamento de Barbearia.</h2>
-<h2>Ferramentas utilizadas: HTML, CSS e JavaScript.</h2>
+<h2 align="center">Ferramentas utilizadas: HTML, CSS e JavaScript.</h2>
 
 <strong>Como usar:</strong>
 
