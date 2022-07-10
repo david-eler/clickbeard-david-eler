@@ -15,9 +15,9 @@ E por fim, nos dois ambientes é possível acompanhar o histórico de agendament
 
 <strong>Imagens:</strong>
 
-<img src="https://imgur.com/bhlDL3P" alt="Print da Página Inicial">
-<img src="https://imgur.com/ZWjxURO" alt="Print da Área de Cadastro de Usuário">
-<img src="https://imgur.com/u8dMgHY" alt="Print da Área do Usuário">
-<img src="https://imgur.com/srufFHb" alt="Print da Área do Administrador">
-<img src="https://imgur.com/r44EdXi" alt="Print do responsivo">
+<img src="https://i.ibb.co/WFQBPD0/1.png" alt="Print da Página Inicial">
+<img src="https://i.ibb.co/LJmhgPj/2.png" alt="Print da Área de Cadastro de Usuário">
+<img src="https://i.ibb.co/dJBy9Bx/3.png" alt="Print da Área do Usuário">
+<img src="https://i.ibb.co/ZB76NcH/4.png" alt="Print da Área do Administrador">
+<img src="https://i.ibb.co/yNTcjcS/5.png" alt="Print do responsivo">
 
