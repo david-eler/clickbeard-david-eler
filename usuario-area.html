@@ -58,7 +58,7 @@
                                 <option value="abel">Abel</option>
                                 <option value="david">David</option>
                                 <option value="paulo">Paulo</option>
-                                <option value="roberto">Roberto</option>       
+                                <option value="roberto">Roberto</option>
                             </select>
                         </div>
                     </fieldset>
@@ -106,27 +106,14 @@
                         <p class="links"><a href="usuario-agenda.html">Meus agendamentos</a></p>
                         <div class="sair-button">
                             <button onclick="sair()">Sair</button>
-                        </div>                       
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        let userLogado = JSON.parse(localStorage.getItem('userLogado')) ;
-    
-        if(localStorage.getItem('token') == null){
-            alert('Você precisa estar logado para acessar essa página');
-            window.location.href = 'index.html';
-        }
-    
-        function sair(){
-            localStorage.removeItem('token');
-            localStorage.removeItem('userLogado');
-            window.location.href = 'index.html';
-        }
-    </script>
+    <script src="js/usuario-area.js"></script>
 </body>
 
 </html>
