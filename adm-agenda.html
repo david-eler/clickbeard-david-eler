@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/usuario-agenda-style.css" />
+    <link rel="icon" href="./img/barbershop-icon.png">
+    <title>Agendamentos - ClickBeard</title>
+</head>
+
+<body>
+    <div class="container-global">
+        <div class="conteudo">
+            <div class="titulo">
+                <h1>ClickBeard<span>®</span></h1>
+            </div>
+
+            <div class="agendar-h2">
+                <h2>Seus agendamentos</h2>
+            </div>
+
+            <div class="caixa-global">
+                <div class="caixa1">
+                    <div class="imagem"><!-- imagem -->
+                        <img src="./img/coming-soon.png" alt="Em breve">
+                    </div>
+
+                    <div class="sair-button">
+                        <button onclick="sair()">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userLogado = JSON.parse(localStorage.getItem('userLogado'));
+
+        if (localStorage.getItem('token') == null) {
+            alert('Você precisa estar logado para acessar essa página');
+            window.location.href = 'index.html';
+        }
+
+        function sair() {
+            window.location.href = 'usuario-area.html';
+        }
+    </script>
+</body>
+
+</html>

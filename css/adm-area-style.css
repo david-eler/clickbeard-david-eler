@@ -24,7 +24,7 @@ body {
 }
 
 .titulo h1 {
-    color: white;
+    color: #fff;
     text-align: center;
     font-size: 40px;
 }
@@ -35,12 +35,12 @@ body {
 }
 
 .agendar-h2 {
-    background: rgb(70, 70, 70);
+    background: #464646;
     padding: 5px 10px;
 }
 
 .agendar-h2 h2 {
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
@@ -51,8 +51,8 @@ body {
 }
 
 .caixa1 {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     padding: 120px 90px;
 }
 
@@ -84,8 +84,8 @@ body {
 }
 
 .caixa2 {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     padding: 120px 90px;
     border-left: 1px solid rgba(70,70,70,.5);
 }
@@ -113,10 +113,15 @@ button {
     align-self: center;
     padding: 10px 25px;
     border: 0;
-    box-shadow: 2px 2px 3px;
     border-radius: 4px;
     font-family: "Karla", sans-serif;
     font-size: 20px;
+}
+
+button:hover {
+    color: #fff;
+    background: #808080;
+    cursor: pointer;
 }
 
 .links {
@@ -125,12 +130,12 @@ button {
 }
 
 .links a {
-    color: red;
+    color: #f00;
     text-decoration: none;
 }
 
 .links a:hover {
-    color: greenyellow;
+    color: #adff2f;
     text-decoration: underline;
 }
 

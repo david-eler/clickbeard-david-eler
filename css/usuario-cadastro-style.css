@@ -24,7 +24,7 @@ body {
 }
 
 .titulo h1 {
-    color: white;
+    color: #fff;
     text-align: center;
     font-size: 40px;
 }
@@ -35,28 +35,28 @@ body {
 }
 
 .cadastrar-h2 {
-    background: rgb(70, 70, 70);
+    background: #464646;
     padding: 5px 10px;
 }
 
 .cadastrar-h2 h2 {
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
 #msgErro {
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
     padding: 5px;
-    background: #FF0000;
+    background: #f00;
     display: none;
 }
 
 #msgSucesso {
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
     padding: 5px;
-    background: #00BB00;
+    background: #0b0;
     display: none;
 }
 
@@ -67,8 +67,8 @@ body {
 }
 
 .caixa1 {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     padding: 90px;
 }
 
@@ -88,8 +88,8 @@ body {
 }
 
 .caixa2 {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     padding: 90px;
     border-left: 1px solid rgba(70,70,70,.5);
 }
@@ -122,7 +122,7 @@ body {
     top: 31px;
     right: 10px;
     cursor: pointer;
-    color: black;
+    color: #000;
 }
 
 .button {
@@ -142,8 +142,8 @@ button {
 }
 
 button:hover {
-    color: white;
-    background: grey;
+    color: #fff;
+    background: #808080;
     cursor: pointer;
 }
 
@@ -153,12 +153,12 @@ button:hover {
 }
 
 .links a {
-    color: red;
+    color: #f00;
     text-decoration: none;
 }
 
 .links a:hover {
-    color: greenyellow;
+    color: #adff2f;
     text-decoration: underline;
 }
 

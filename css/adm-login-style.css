@@ -22,7 +22,7 @@ body {
 
 .caixa1 {
     background: rgba(1,1,1,0.9);
-    color: white;
+    color: #fff;
     padding: 220px 110px;
     display: flex;
     justify-content: center;
@@ -56,9 +56,9 @@ body {
 
 #msgErro {
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
     padding: 5px;
-    background: #FF0000;
+    background: #f00;
     margin-bottom: 10px;
     display: none;
 }
@@ -115,20 +115,20 @@ button {
 }
 
 button:hover {
-    color: white;
-    background: #000000;
+    color: #fff;
+    background: #000;
     cursor: pointer;
 }
 
 .links {
     background: rgba(1,1,1,0.9);
     padding: 4px 8px;
-    color: red;
+    color: #f00;
     text-decoration: none;
 }
 
 .links:hover {
-    color: greenyellow;
+    color: #adff2f;
     text-decoration: underline;
 }
 

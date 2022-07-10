@@ -52,9 +52,9 @@ body {
 
 #msgErro {
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
     padding: 5px;
-    background: #FF0000;
+    background: #f00;
     margin-bottom: 10px;
     display: none;
 }
@@ -116,24 +116,24 @@ button {
 }
 
 button:hover {
-    color: white;
-    background: #000000;
+    color: #fff;
+    background: #000;
     cursor: pointer;
 }
 
 .links {
     background: rgba(1,1,1,0.9);
     padding: 4px 8px;
-    color: white;
+    color: #fff;
 }
 
 .links a {
     text-decoration: none;
-    color: red;
+    color: #f00;
 }
 
 .links a:hover {
-    color: greenyellow;
+    color: #adff2f;
     text-decoration: underline;
 }
 

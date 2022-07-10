@@ -74,11 +74,11 @@
                         </div>
 
                         <div class="button">
-                            <button onclick="cadastrar()">Cadastrar</button>
+                            <button>Cadastrar</button>
                         </div>
 
                         <div class="links">
-                            <a href="#">Meus agendamentos</a>
+                            <a href="adm-agenda.html">Meus agendamentos</a>
                         </div>
 
                         <div class="links">
@@ -90,37 +90,6 @@
         </div>
     </div>
     <script>
-        let nome = document.querySelector('#nome');
-        let labelNome = document.querySelector('#label-nome');
-        let validNome = true;
-
-        let dataNascimento = document.querySelector('#data-nascimento');
-        let labelDataNascimento = document.querySelector('#label-data-nascimento');
-        let validDataNascimento = true;
-
-        let dataContratacao = document.querySelector('#data-contratacao');
-        let labelDataContratacao = document.querySelector('#label-data-contratacao');
-        let validDataContratacao = true;
-
-        let corteTesoura = document.querySelector('#tesoura');
-        let labelCorteTesoura = document.querySelector('#label-tesoura');
-        let validCorteTesoura = false;
-
-        let corteMaquina = document.querySelector('#maquina');
-        let labelCorteMaquina = document.querySelector('#label-maquina');
-        let validCorteMaquina = false;
-
-        let corteBarba = document.querySelector('#barba');
-        let labelCorteBarba = document.querySelector('#label-barba');
-        let validCorteBarba = false;
-
-        let corteSobrancelha = document.querySelector('#sobrancelha');
-        let labelCorteSobrancelha = document.querySelector('#label-sobrancelha');
-        let validCorteSobrancelha = false;
-
-        let msgErro = document.querySelector('#msgErro');
-        let msgSucesso = document.querySelector('#msgSucesso');
-
         let admLogado = JSON.parse(localStorage.getItem('admLogado'));
 
         function sair() {

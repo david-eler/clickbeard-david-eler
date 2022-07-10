@@ -1,0 +1,89 @@
+body {
+    height: 100vh;
+    font-family: "Karla", sans-serif;
+    background-image: url("../img/barbershop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-global {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1440px;
+}
+
+.titulo {
+    background: rgba(1, 1, 1, 0.9);
+    padding: 5px 10px;
+}
+
+.titulo h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+.titulo h1 span {
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.agendar-h2 {
+    background: #464646;
+    padding: 5px 10px;
+}
+
+.agendar-h2 h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.caixa-global {
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.caixa1 {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: auto;
+}
+
+.imagem {
+    height: auto;
+    padding: 10px;
+}
+
+.imagem img {
+    width: 100%;
+}
+
+.sair-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.sair-button button {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 4px;
+}
+
+button:hover {
+    color: #fff;
+    background: #808080;
+    cursor: pointer;
+}
