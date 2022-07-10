@@ -31,34 +31,34 @@
 
                         <div class="servicos">
                             <div>
-                                <input type="checkbox" name="tesoura" id="tesoura" value="corte-tesoura">
-                                <label for="tesoura">Corte Tesoura</label>
+                                <input type="checkbox" name="tesoura" id="tesoura" value="Corte: Tesoura">
+                                <label id="label-tesoura" for="tesoura">Corte Tesoura</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" name="maquina" id="maquina" value="corte-maquina">
-                                <label for="maquina">Corte Máquina</label>
+                                <input type="checkbox" name="maquina" id="maquina" value="Corte: Máquina">
+                                <label id="label-maquina" for="maquina">Corte Máquina</label>
                             </div>
 
 
                             <div>
-                                <input type="checkbox" name="barba" id="barba" value="corte-barba">
-                                <label for="barba">Barba</label>
+                                <input type="checkbox" name="barba" id="barba" value="Corte: Barba">
+                                <label id="label-barba" for="barba">Barba</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" name="sobrancelha" id="sobrancelha" value="corte-sobrancelha">
-                                <label for="sobrancelha">Sobrancelha</label>
+                                <input type="checkbox" name="sobrancelha" id="sobrancelha" value="Corte: Sobrancelha">
+                                <label id="label-sobrancelha" for="sobrancelha">Sobrancelha</label>
                             </div>
                         </div>
 
                         <div class="barbeiros">
                             <label for="barbeiro">Barbeiro: </label>
                             <select name="barbeiro" id="barbeiro">
-                                <option value="david">David</option>
-                                <option value="roberto">Roberto</option>
                                 <option value="abel">Abel</option>
+                                <option value="david">David</option>
                                 <option value="paulo">Paulo</option>
+                                <option value="roberto">Roberto</option>       
                             </select>
                         </div>
                     </fieldset>
@@ -92,7 +92,6 @@
                         </div>
                     </fieldset>
 
-
                     <div class="aviso-area">
                         <input type="checkbox" name="aviso" id="aviso" value="aviso-agendamento">
                         <label for="aviso">É necessário chegar com 5 minutos de antecedência. Do contrário, o
@@ -113,21 +112,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let userLogado = JSON.parse(localStorage.getItem('userLogado')) ;
+    
+        if(localStorage.getItem('token') == null){
+            alert('Você precisa estar logado para acessar essa página');
+            window.location.href = 'index.html';
+        }
+    
+        function sair(){
+            localStorage.removeItem('token');
+            localStorage.removeItem('userLogado');
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
-
-<script>
-    let userLogado = JSON.parse(localStorage.getItem('userLogado')) ;
-
-    if(localStorage.getItem('token') == null){
-        alert('Você precisa estar logado para acessar essa página');
-        window.location.href = 'index.html';
-    }
-
-    function sair(){
-        localStorage.removeItem('token');
-        localStorage.removeItem('userLogado');
-        window.location.href = 'index.html';
-    }
-</script>
 
 </html>

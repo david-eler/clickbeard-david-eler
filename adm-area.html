@@ -24,22 +24,25 @@
                 <h2>Cadastro de Barbeiros</h2>
             </div>
 
+            <div id="msgErro"></div>
+            <div id="msgSucesso"></div>
+
             <div class="caixa-global">
                 <div class="caixa1">
                     <div>
                         <div class="nome">
-                            <label for="nome">Nome:</label>
+                            <label id="label-nome" for="nome">Nome:</label>
                             <input type="text" id="nome" placeholder="">
                         </div>
 
                         <div class="data">
-                            <label for="data-nascimento">Data de nascimento:</label>
-                            <input type="date" name="data-nascimento" id="nascimento" value="">
+                            <label id="label-data-nascimento" for="data-nascimento">Data de nascimento:</label>
+                            <input type="date" name="data-nascimento" id="data-nascimento" value="">
                         </div>
 
                         <div class="data">
-                            <label for="data-contratacao">Data da contratação:</label>
-                            <input type="date" name="data-contratacao" id="contratacao" value="">
+                            <label id="label-data-contratacao" for="data-contratacao">Data da contratação:</label>
+                            <input type="date" name="data-contratacao" id="data-contratacao" value="">
                         </div>
                     </div>
 
@@ -50,28 +53,28 @@
                         <legend>Especialidades:</legend>
 
                         <div>
-                            <input type="checkbox" name="tesoura" id="tesoura" value="corte-tesoura">
-                            <label for="tesoura">Corte Tesoura</label>
+                            <input type="checkbox" name="tesoura" id="tesoura" value="Corte: Tesoura">
+                            <label id="label-tesoura" for="tesoura">Corte Tesoura</label>
                         </div>
 
                         <div>
-                            <input type="checkbox" name="maquina" id="maquina" value="corte-maquina">
-                            <label for="maquina">Corte Máquina</label>
+                            <input type="checkbox" name="maquina" id="maquina" value="Corte: Máquina">
+                            <label id="label-maquina" for="maquina">Corte Máquina</label>
                         </div>
 
 
                         <div>
-                            <input type="checkbox" name="barba" id="barba" value="corte-barba">
-                            <label for="barba">Barba</label>
+                            <input type="checkbox" name="barba" id="barba" value="Corte: Barba">
+                            <label id="label-barba" for="barba">Barba</label>
                         </div>
 
                         <div>
-                            <input type="checkbox" name="sobrancelha" id="sobrancelha" value="corte-sobrancelha">
-                            <label for="sobrancelha">Sobrancelha</label>
+                            <input type="checkbox" name="sobrancelha" id="sobrancelha" value="Corte: Sobrancelha">
+                            <label id="label-sobrancelha" for="sobrancelha">Sobrancelha</label>
                         </div>
 
                         <div class="button">
-                            <button>Cadastrar</button>
+                            <button onclick="cadastrar()">Cadastrar</button>
                         </div>
 
                         <div class="links">
@@ -87,6 +90,37 @@
         </div>
     </div>
     <script>
+        let nome = document.querySelector('#nome');
+        let labelNome = document.querySelector('#label-nome');
+        let validNome = true;
+
+        let dataNascimento = document.querySelector('#data-nascimento');
+        let labelDataNascimento = document.querySelector('#label-data-nascimento');
+        let validDataNascimento = true;
+
+        let dataContratacao = document.querySelector('#data-contratacao');
+        let labelDataContratacao = document.querySelector('#label-data-contratacao');
+        let validDataContratacao = true;
+
+        let corteTesoura = document.querySelector('#tesoura');
+        let labelCorteTesoura = document.querySelector('#label-tesoura');
+        let validCorteTesoura = false;
+
+        let corteMaquina = document.querySelector('#maquina');
+        let labelCorteMaquina = document.querySelector('#label-maquina');
+        let validCorteMaquina = false;
+
+        let corteBarba = document.querySelector('#barba');
+        let labelCorteBarba = document.querySelector('#label-barba');
+        let validCorteBarba = false;
+
+        let corteSobrancelha = document.querySelector('#sobrancelha');
+        let labelCorteSobrancelha = document.querySelector('#label-sobrancelha');
+        let validCorteSobrancelha = false;
+
+        let msgErro = document.querySelector('#msgErro');
+        let msgSucesso = document.querySelector('#msgSucesso');
+
         let admLogado = JSON.parse(localStorage.getItem('admLogado'));
 
         function sair() {
