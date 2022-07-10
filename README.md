@@ -11,7 +11,7 @@ Também na tela inicial está disponibilizado o link para login no ambiente de a
 
 Na área de usuário é possível selecionar opções para agendamento de sessão na barbearia, como serviço, barbeiro, dia e horário (<i>features a serem implementadas</i>).
 Já na área de administrador é possível selecionar opções para cadastro de novos barbeiros, como nome, especialidades, data de nascimento e contratação (<i>features a serem implementadas</i>).
-E por fim, nos dois ambientes é possível acompanhar o histórico de agendamentos realizados (adm-agenda.html e usuario-agenda.html (<i>features a serem implementadas</i>).
+E por fim, nos dois ambientes é possível acompanhar o histórico de agendamentos realizados (<i>adm-agenda.html e usuario-agenda.html</i>) (<i>features a serem implementadas</i>).
 
 <strong>Imagens:</strong>
 
